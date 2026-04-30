@@ -8,12 +8,12 @@ def divi(a,b):
     q=0
     temp=0
     for i in range(31,-1,-1):#31 to 0
-        if (temp(b<<i) <= a):
+        if (temp+(b<<i) <= a):
             temp += b<<1
             q |= 1<<i#q=q|(1<<i)
     if sign==-1:
         q = -q
     return q
-a=input(input("Enter a : "))
-b=input(input("Enter b : "))
+a=int(input("Enter a : "))
+b=int(input("Enter b : "))
 print(divi(a,b))
